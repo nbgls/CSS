@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body {
+        /* 内容会被修剪，并且其余内容是不可见的。 */
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .main_box {
+        width: 600px;
+        height: 600px;
+        padding-top: 300px;
+        margin-left: 300px;
+        transform-style: preserve-3d;
+        animation: rotate 5s linear infinite;
+    }
+.main_box:hover{
+    animation-play-state: paused;
+}
+.main_box:hover div{
+    opacity: 1;
+}
+    .main_box img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .main_box div {
+        opacity: 0.7;
+        transition: all 5s;
+        position: absolute;
+
+    }
+
+
+
+    @keyframes rotate {
+        form {
+            transform: rotateX(0deg) rotateY(0deg) ;
+        }
+
+        to {
+            transform: rotateX(360deg) rotateY(360deg);
+        }
+    }
+
+    .main_box .front {
+        transform: rotateY(0deg) translateZ(150px);
+    }
+
+    .main_box .back {
+        transform: translateZ(-150px) rotateY(180deg);
+
+    }
+
+    .main_box .left {
+        transform: rotateY(90deg) translateZ(150px);
+    }
+
+    .main_box .right {
+        transform: rotateY(-90deg) translateZ(150px);
+    }
+
+    .main_box .top {
+        transform: rotateX(90deg) translateZ(150px);
+    }
+
+    .main_box .bottom {
+        transform: rotateX(-90deg) translateZ(150px);
+    }
+</style>
+
+<body>
+    <div class="main_box">
+        <div class="front">
+            <img src="photo/库洛米.jpg">
+        </div>
+        <div class="back">
+            <img src="photo/鲜花.jpg">
+        </div>
+
+        <div class="left">
+            <img src="photo/草莓熊1.jpg">
+        </div>
+        <div class="right">
+            <img src="photo/四叶草.jpg">
+        </div>
+        <div class="top">
+            <img src="photo/草莓熊2.jpg">
+        </div>
+        <div class="bottom">
+            <img src="photo/image-20211210151709114.png">
+        </div>
+
+
+    </div>
+</body>
+
+</html>

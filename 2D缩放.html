@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    background-color: #000;
+  }
+
+  .hret {
+    width: 400px;
+    height: 400px;
+    /* background-color: pink; */
+    position: relative;
+    left: 400px;
+    top: 100px;
+  }
+
+  @keyframes donghua {
+    from {
+      transform: scale(0, 0);
+    }
+
+    to {
+      transform: scale(1, 1);
+    }
+
+  }
+
+
+  .mian {
+    background-color: blue;
+    margin-left: 10px;
+    width: 15px;
+    height: 60px;
+    float: left;
+    border: #000;
+    border-radius: 10px;
+    position: relative;
+    top: 150px;
+    left: 95px;
+    animation: donghua 2s linear 0s infinite alternate;
+    /* alternate反向循环 */
+  }
+
+  .mian:nth-child(2) {
+    /* width: 20px; */
+    height: 90px;
+    margin-top: -10px;
+    background-color: pink;
+  }
+
+  .mian:nth-child(3) {
+    /* width: 20px; */
+    height: 120px;
+    margin-top: -20px;
+    background-color: forestgreen;
+  }
+
+  .mian:nth-child(4) {
+    height: 140px;
+    margin-top: -10px;
+    background-color: coral;
+
+  }
+
+  .mian:nth-child(5) {
+    height: 160px;
+    background-color: red;
+  }
+
+  .mian:nth-child(6) {
+    height: 140px;
+    margin-top: -10px;
+    background-color: coral;
+  }
+
+  .mian:nth-child(7) {
+    height: 120px;
+    margin-top: -20px;
+    background-color: forestgreen;
+  }
+
+  .mian:nth-child(8) {
+    height: 90px;
+    margin-top: -10px;
+    background-color: pink;
+  }
+
+  .mian:nth-child(9) {
+    height: 60px;
+  }
+</style>
+
+
+
+<body>
+  <div class="hret">
+    <div class="mian"></div>
+    <div class="mian"></div>
+    <div class="mian"></div>
+    <div class="mian"></div>
+    <div class="mian"></div>
+    <div class="mian"></div>
+    <div class="mian"></div>
+    <div class="mian"></div>
+    <div class="mian"></div>
+
+  </div>
+</body>
+
+</html>

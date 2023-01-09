@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<style>
+			* {
+			    margin: 0;
+			    padding: 0;
+			  }
+			.div1{
+				width: 200px;
+				height: 200px;
+				flex: 0 0 92px;            /*弹性布局div*/
+			}
+			.div2{
+				width: 300px;
+				height: 300px;
+				position: absolute;       /*层属性盒子*/
+				opacity: 0;           /*属性用于指定一个元素的透明度*/
+				transition: 0.5s;     /*将某一个属性从一个属性值在指定的时间内平滑过渡到另一个属性值来实现动画效果 一般搭配hover来使用*/
+				z-index: 999;                            /*设置元素堆叠顺序*/
+				top: -41px;
+				left: -75px;
+			}
+			.div1:hover .div2 {    /*伪类在鼠标移到元素上时 向此元素添加特殊的样式 这个伪类应用处于悬停状态的元素*/
+				opacity: 1;
+			}
+		</style>
+		<div class="div1">
+				<img src="photo/草莓熊1.jpg" style="width: 200px;height: 200px;"/>
+			<div class="div2">
+				<img src="photo/草莓熊2.jpg" style="width: 300px;height: 300px;"/>
+			</div>
+		</div>
+	</body>
+</html>

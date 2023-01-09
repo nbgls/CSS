@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+</head>
+
+<style>
+  body {
+    width: 100vh;
+    height: 100vh;
+    justify-content: center;
+    background-color: #000;
+    display: flex;
+    perspective: 2000px;
+  }
+
+  div {
+    width: 350px;
+    height: 200px;
+    /* position: absolute; */
+    display: flex;
+    margin-top: 200px;
+    margin-left: 400px;
+    transform-style: preserve-3d;
+    animation: donghua 20s linear infinite;
+  }
+
+  div:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+  }
+
+  div img {
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    /* display: flex; */
+    -webkit-box-reflect: below 15px -webkit-linear-gradient(transparent 10%, rgba(255, 255, 255, 0.3));
+  }
+
+  @keyframes donghua {
+    from {
+      transform: rotateY(0deg);
+    }
+
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+
+  div img:nth-child(1) {
+    transform: translateZ(500px);
+  }
+
+  div img:nth-child(2) {
+    transform: rotateY(72deg) translateZ(500px);
+  }
+
+  div img:nth-child(3) {
+    transform: rotateY(144deg) translateZ(500px);
+  }
+
+  div img:nth-child(4) {
+    transform: rotateY(216deg) translateZ(500px);
+  }
+
+  div img:nth-child(5) {
+    transform: rotateY(288deg) translateZ(500px);
+  }
+</style>
+
+<body>
+  <div>
+    <img src="photo/草莓熊2.jpg">
+    <img src="photo/草莓熊1.jpg">
+    <img src="photo/四叶草.jpg">
+    <img src="photo/库洛米.jpg">
+    <img src="photo/鲜花.jpg">
+  </div>
+</body>
+
+</html>
